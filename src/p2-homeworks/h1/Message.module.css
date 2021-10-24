@@ -1,0 +1,49 @@
+.message {
+    color: #9db098;
+}
+
+.wrapper {
+    display: flex;
+
+}
+
+.time {
+    position: relative;
+    left: 130px;
+    color: darkgrey;
+}
+
+.insideWrapper {
+    padding: 10px;
+}
+
+.messageWrapper {
+    width: 200px;
+    height: fit-content;
+    border-radius: 11px;
+    position: relative;
+    background: #5c5c5c;
+}
+
+.messageWrapper:after {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: -21px;
+    width: 30px;
+    height: 25px;
+    background: radial-gradient(circle, transparent 60%, #5c5c5c 62%) bottom right/200% 200%;
+}
+
+.avatar img {
+    width: 45px;
+    border-radius: 50px;
+    position: relative;
+    top: 21px;
+}
+
+.name {
+    color: #aa9fc2;
+    margin-bottom: 3px;
+}
+
