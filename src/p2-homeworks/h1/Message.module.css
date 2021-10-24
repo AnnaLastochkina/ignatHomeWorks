@@ -3,6 +3,7 @@
 }
 
 .wrapper {
+    margin-top: 20px;
     display: flex;
 
 }
@@ -11,6 +12,8 @@
     position: relative;
     left: 130px;
     color: darkgrey;
+    top:2px;
+    font-size: 14px;
 }
 
 .insideWrapper {
@@ -36,11 +39,13 @@
 }
 
 .avatar img {
-    width: 45px;
+
+    width: 43px;
     border-radius: 50px;
-    position: relative;
     top: 21px;
 }
+.avatar { display:flex;
+    align-items: flex-end;}
 
 .name {
     color: #aa9fc2;
