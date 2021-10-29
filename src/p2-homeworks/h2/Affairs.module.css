@@ -1,3 +1,36 @@
-.someClass {
+.task2wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+    background-color: #aa9fc2;
+    padding: 2px;
+}
+.task2name {
+    margin: 5px;
+    width: 100px;
 
+}
+.low{
+    color:green;
+    font-weight: bold;
+}
+.middle{
+    color:orange;
+    font-weight: bold;
+}
+.high{
+    color:red;
+    font-weight: bold;
+}
+.task2BtnSet {
+    padding: 6px;
+    background-color: darkgrey;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    margin-right: 10px;
+}
+
+.task2deletebtn {
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
