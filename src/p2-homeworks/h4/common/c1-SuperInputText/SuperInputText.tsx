@@ -39,18 +39,22 @@ const SuperInputText: React.FC<SuperInputTextPropsType> = (
     }
 
     const finalSpanClassName = `${s.error} ${spanClassName ? spanClassName : ''}`
-    const finalInputClassName = `${s.errorInput} ${className}` // need to fix with (?:) and s.superInput
+    const finalInputClassName =  ` ${error ? s.errorInput : s.form__field} ${className}` // need to fix with (?:) and s.superInput
 
     return (
         <>
-            <input
-                type={'text'}
-                onChange={onChangeCallback}
-                onKeyPress={onKeyPressCallback}
-                className={finalInputClassName}
-
-                {...restProps} // отдаём инпуту остальные пропсы если они есть (value например там внутри)
-            />
+            <div className="field">
+                <input type={'text'}
+                       onChange={onChangeCallback}
+                       onKeyPress={onKeyPressCallback}
+                       className={finalInputClassName}
+                       placeholder="Your text"
+                       name="name"
+                       id='name'
+                       required
+                       {...restProps}/>
+                <label htmlFor="name" className={s.form__label}>Your text</label>
+            </div>
             {error && <span className={finalSpanClassName}>{error}</span>}
         </>
     )

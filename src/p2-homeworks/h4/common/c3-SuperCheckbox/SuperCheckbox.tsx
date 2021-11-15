@@ -20,21 +20,25 @@ const SuperCheckbox: React.FC<SuperCheckboxPropsType> = (
     }
 ) => {
     const onChangeCallback = (e: ChangeEvent<HTMLInputElement>) => {
-        // сделайте так чтоб работал onChange и onChangeChecked
+        onChange // если есть пропс onChange
+        && onChange(e);
+
+        onChangeChecked && onChangeChecked(e.currentTarget.checked);// сделайте так чтоб работал onChange и onChangeChecked
     }
 
     const finalInputClassName = `${s.checkbox} ${className ? className : ''}`
 
     return (
-        <label>
+        <label className={s.hw4_checkbox}>
             <input
                 type={'checkbox'}
                 onChange={onChangeCallback}
-                className={finalInputClassName}
+                className={finalInputClassName + ' ' + s.hw4_input}
 
                 {...restProps} // отдаём инпуту остальные пропсы если они есть (checked например там внутри)
             />
-            {children && <span className={s.spanClassName}>{children}</span>}
+            <span className={s.checkbox}></span>
+            {children && <span className={s.SpanName}>{children}</span>}
         </label> // благодаря label нажатие на спан передастся в инпут
     )
 }
