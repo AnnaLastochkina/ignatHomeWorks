@@ -43,7 +43,7 @@ const SuperInputText: React.FC<SuperInputTextPropsType> = (
 
     return (
         <>
-            <div className="field">
+            <div className={s.field}>
                 <input type={'text'}
                        onChange={onChangeCallback}
                        onKeyPress={onKeyPressCallback}
@@ -53,7 +53,7 @@ const SuperInputText: React.FC<SuperInputTextPropsType> = (
                        id='name'
                        required
                        {...restProps}/>
-                <label htmlFor="name" className={s.form__label}>Your text</label>
+
             </div>
             {error && <span className={finalSpanClassName}>{error}</span>}
         </>
